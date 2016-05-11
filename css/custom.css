@@ -1,7 +1,21 @@
+@font-face {
+    font-family: digital;
+    src: url("/fonts/DS-DIGI.TTF");
+}
+
 .navbar-brand {
     padding: 5px 15px;
 }
 
 .input-sm {
     width: 250px;
+}
+
+.lab-settings {
+    margin: 50px 0 15px 0;
+}
+
+.lab-settings-display {
+    font-size: 50px;
+    font-family: digital;
 }
