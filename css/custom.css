@@ -17,7 +17,7 @@
 }
 
 .masthead {
-    background: rgba(152, 54, 138, 1);
+    background: rgba(0, 84, 148, 1);
     min-height: 600px;
     padding: 100px 0 0 0;
     position: relative;
@@ -42,6 +42,34 @@
     max-height: 200px;
 }
 
+#parameters,
+#main-display,
+#scanner {
+    padding: 30px 0;
+}
+
+#parameters {
+    background: rgba(2, 117, 216, 1);
+}
+
+#parameters label {
+    color: white;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+
 .input-sm {
     width: 100%;
 }
@@ -50,14 +78,63 @@
     margin: 50px 0 15px 0;
 }
 
-.lab-settings-display {
-    font-size: 50px;
+#main-display {
+    background: #272e38;
+}
+
+.display {
+    background: #0f1620;
+    border-radius:6px;
+    color: #cacaca;
+}
+
+.display:after {
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.display.digits {
+    border-radius: 6px 6px 0 0;
+}
+
+.display.units {
+    border-radius: 0 0 6px 6px;
+    position: relative;
+    top: -2px;
+}
+
+.digits {
+    font-size: 60px;
+    font-family: digital;
+}
+
+.digits input {
+    background: #0f1620;
+}
+
+.units {
+    background: #0f1620;
+    color: #cacaca;
+    font-size: 25px;
     font-family: digital;
 }
 
 .settings-digits {
     border: none;
     width: 200px;
+}
+
+.img-result {
+    max-width: 600px;
+    min-height: 300px;
+    height: auto;
+}
+
+.simulator-commands {
+    padding: 10px;
+}
+
+#scanner {
+    background-color: cadetblue;
 }
 
 footer {

@@ -46,18 +46,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-4">
-                    <h4>Animal</h4>
+                    <h4><label for="conf-animal">Animal</label></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4">
-                    <h4>Partie du corps</h4>
+                    <h4><label for="conf-corps">Partie du corps</label></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4">
-                    <h4>Cas</h4>
+                    <h4><label for="conf-serie">Cas</label></h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-4">
-                    <select name="animal" class="input-sm" id="conf-animal">
+                    <select class="input-sm" id="conf-animal">
                         <option value="" disabled selected>Sélectionner un animal</option>
                         <option value="CN">Chien</option>
                         <option value="cat">Chat</option>
@@ -65,7 +65,7 @@
                     </select>
                 </div>
                 <div class="col-xs-6 col-sm-4">
-                    <select name="body_part" class="input-sm" id="conf-corps">
+                    <select class="input-sm" id="conf-corps">
                         <option value="" disabled selected>Choisir la région étudiée</option>
                         <option value="TH">Thorax</option>
                         <option value="AB">Abdomen</option>
@@ -73,7 +73,7 @@
                     </select>
                 </div>
                 <div class="col-xs-6 col-sm-4">
-                    <select name="body_part" class="input-sm" id="conf-serie">
+                    <select class="input-sm" id="conf-serie">
                         <option value="" disabled selected>Sélectionner un cas</option>
                         <option value="01">01</option>
                     </select>
@@ -85,85 +85,97 @@
     <!-- Parameters -->
     <div id="main-display">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <table class="table lab-settings">
-                        <tr class="lab-settings-display">
-                            <td><input type="text" id="text" value="80" size="3" readonly="true" class="settings-digits" /></td>
-                            <td><input type="text" id="text4" value="7.5" size="3" readonly="true" class="settings-digits" /></td>
-                            <td><input type="text" id="text2" value="150" size="3" readonly="true" class="settings-digits" /></td>
-                            <td><input type="text" id="text3" value="0.050" size="3" readonly="true" class="settings-digits" /></td>
-                        </tr>
-                        <tr>
-                            <td>kVp</td>
-                            <td>mAs</td>
-                            <td>mA</td>
-                            <td>s</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="btn btn-default btn-sm" onclick="modifierTension(5);">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn btn-default btn-sm">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn btn-default btn-sm" onclick="modifierIntensite(50); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn btn-default btn-sm" onclick="modifierTempsPlus(); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="btn btn-default btn-sm" onclick="modifierTension(-5);">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn btn-default btn-sm">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn btn-default btn-sm" onclick="modifierIntensite(-50); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn btn-default btn-sm" onclick="modifierTempsMoins(); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <button class="btn btn-default btn-sm" onclick="printall()">
-                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                    </button>
+            <div class="row display digits row-centered">
+                <div class="col-sm-2 col-centered">
+                    <input type="text" id="text" value="80" size="3" readonly class="settings-digits" />
+                </div>
+                <div class="col-lg-2 col-centered">
+                    <input type="text" id="text4" value="7.5" size="3" readonly class="settings-digits" />
+                </div>
+                <div class="col-lg-2 col-centered">
+                    <input type="text" id="text2" value="150" size="3" readonly class="settings-digits" />
+                </div>
+                <div class="col-lg-2 col-centered">
+                    <input type="text" id="text3" value="0.050" size="3" readonly class="settings-digits" />
                 </div>
             </div>
+            <div class="row row-centered units display">
+                <div class="col-md-2 col-centered">
+                    <label for="text">kVp</label>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <label for="text4">mAs</label>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <label for="text2">mA</label>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <label for="text3">s</label>
+                </div>
+            </div>
+            <div class="row row-centered simulator-commands">
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm" onclick="modifierTension(5);">
+                        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm" onclick="modifierIntensite(50); modifierIntensiteTemps();">
+                        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm" onclick="modifierTempsPlus(); modifierIntensiteTemps();">
+                        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-centered simulator-commands">
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm" onclick="modifierTension(-5);">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm" onclick="modifierIntensite(-50); modifierIntensiteTemps();">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-centered">
+                    <div class="btn btn-default btn-sm" onclick="modifierTempsMoins(); modifierIntensiteTemps();">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-default btn-sm" onclick="printall()">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
         </div>
     </div>
 
     <!-- Scanner -->
     <div id="scanner">
         <div class="container">
-          <div class="row">
-              <div class="col-sm-5 col-md-6">
-                  <img id="img-scan" alt="" width="500" height="300" />
-              </div>
-              <div class="col-sm-5 col-md-6">
-                  <img id="img-photo" alt="" width="500" height="300" />
-              </div>
-          </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="overlay">
+                        <img class="img-result" id="img-scan" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <img class="img-result" id="img-photo" alt="" />
+                </div>
+            </div>
         </div>
     </div>
 
