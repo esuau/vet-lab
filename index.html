@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Vet'Lab</title>
+    <title>ENVA Vet'Lab | Accueil</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
@@ -17,8 +17,9 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <header class="navbar navbar-static-top navbar-default">
+        <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a href="/">
@@ -29,130 +30,57 @@
             </div>
 
             <!-- Nav links -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <nav class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Simulateur</a></li>
+                    <li class="active"><a href="/">Accueil <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/simulator.html">Simulateur</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
+
         </div>
-    </nav>
+    </header>
 
     <!-- Parameters -->
-    <div id="parameters">
-        <div class="container">
-            <form action="" method="post" novalidate>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-4">
-                        <h4>Animal</h4>
-                    </div>
-                    <div class="col-xs-6 col-sm-4">
-                        <h4>Partie du corps</h4>
-                    </div>
-                    <div class="col-xs-6 col-sm-4">
-                        <h4>Cas</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-4">
-                        <select name="animal" class="input-sm">
-                            <option value="" disabled selected>Sélectionner un animal</option>
-                            <option value="dog">Chien</option>
-                            <option value="cat">Chat</option>
-                            <option value="horse">Cheval</option>
-                        </select>
-                    </div>
-                    <div class="col-xs-6 col-sm-4">
-                        <select name="body_part" class="input-sm">
-                            <option value="" disabled selected>Choisir la région étudiée</option>
-                            <option value="thorax">Thorax</option>
-                            <option value="adbomen">Abdomen</option>
-                            <option value="bone">Os</option>
-                        </select>
-                    </div>
-                    <div class="col-xs-6 col-sm-4">
-                        <select name="body_part" class="input-sm">
-                            <option value="" disabled selected>Sélectionner un cas</option>
-                            <option value="">01</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Parameters -->
-    <div id="main-display">
-        <div class="container">
+    <div id="content" class="masthead">
+        <div class="container text-center">
             <div class="row">
-                <div class="col-md-10">
-                    <table class="table lab-settings">
-                        <tr class="lab-settings-display">
-                            <td><input type="text" id="text" value="80" size="3" readonly="true" class="settings-digits" /></td>
-                            <td><input type="text" id="text4" value="7.5" size="3" readonly="true" class="settings-digits" /></td>
-                            <td><input type="text" id="text2" value="150" size="3" readonly="true" class="settings-digits" /></td>
-                            <td><input type="text" id="text3" value="0.050" size="3" readonly="true" class="settings-digits" /></td>
-                        </tr>
-                        <tr>
-                            <td>kVp</td>
-                            <td>mAs</td>
-                            <td>mA</td>
-                            <td>s</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="btn btn-default btn-sm" onclick="modifierTension(5);">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-default btn-sm">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-default btn-sm" onclick="modifierIntensite(50); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-default btn-sm" onclick="modifierTempsPlus(); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="btn btn-default btn-sm" onclick="modifierTension(-5);">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-default btn-sm">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-default btn-sm" onclick="modifierIntensite(-50); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-default btn-sm" onclick="modifierTempsMoins(); modifierIntensiteTemps();">
-                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="col-md-4">
+                    <img src="/img/Logo_gamixlab_white.png" class="landing-page-img landing-page-img-suppliers" />
                 </div>
+                <div class="col-md-3">
+                    <img src="/img/enva.png" class="landing-page-img landing-page-img-client" />
+                </div>
+                <span class="col-md-4">
+                    <img src="/img/MIAGE_logo_white.png" class="landing-page-img landing-page-img-suppliers"  />
+                </span>
+            </div>
+            <div class="row lead">
+                <p>
+                    Vet'Lab est le tout nouveau simulateur pédagogique dédié à l'apprentissage de la radiologie animale conçu pour les étudiants de l'École nationale vétérinaire d'Alfort.
+                </p>
+            </div>
+            <div class="row">
+                <p>
+                    <a class="btn btn-default btn-lg" href="simulator.html">Commencer maintenant !</a>
+                </p>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="navbar navbar-static-top">
         <div class="container">
 
+            <!-- Footer nav links -->
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/esuau/vet-lab" target="_blank">GitHub</a></li>
+                    <li><a href="http://gamixlab.fr/" target="_blank">Gamixlab</a></li>
+                    <li><a href="http://www.vet-alfort.fr/web/fr/64-presentation-enva.php" target="_blank">À propos</a></li>
+                    <li><a href="http://www.vet-alfort.fr/web/fr/47-contacts.php" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+            <p>Conçu avec amour par <a href="mailto:hatim.laarabi@etu.u-pec.fr" target="_blank">Hatim Laarabi</a>, <a href="mailto:camille.labbaci@etu.u-pec.fr" target="_blank">Camille Labbaci</a>, <a href="mailto:celine.radjaram@etu.u-pec.fr" target="_blank">Céline Radjaram</a>, <a href="mailto:evan.suau@etu.u-pec.fr" target="_blank">Evan Suau</a> et <a href="mailto:jeremy.taieb@etu.u-pec.fr" target="_blank">Jérémy Taïeb</a>.</p>
         </div>
     </footer>
 
