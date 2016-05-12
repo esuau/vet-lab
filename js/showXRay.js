@@ -14,15 +14,24 @@ function image() {
             tmp +".jpg";
 }
 
-function printall() {
-    var link2 = "img/simulator/" + image_photo();
-    document.getElementById("img-photo").setAttribute("src", link2);
-    var link = "img/simulator/" + image();
-    document.getElementById("img-scan").setAttribute("src", link);
-}
-
 function imageExist(url) {
-    var img = image();
+    var img = new Image();
     img.src = url;
     return img.height != 0;
+}
+
+function printall() {
+    var notAvailable = "img/simulator/error-img.png"
+    var link2 = "img/simulator/" + image_photo();
+    if (imageExist(link2)) {
+        document.getElementById("img-photo").setAttribute("src", link2);
+    } else {
+        document.getElementById("img-photo").setAttribute("src", notAvailable);
+    }
+    var link = "img/simulator/" + image();
+    if (imageExist(link)) {
+        document.getElementById("img-scan").setAttribute("src", link);
+    } else {
+        document.getElementById("img-scan").setAttribute("src", notAvailable);
+    }
 }
