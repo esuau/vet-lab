@@ -5,13 +5,12 @@ function image_photo() {
 }
 
 function image() {
-    var tmp = document.getElementById('text3').value.replace(".",",");
     return document.getElementById('conf-animal').value + "_"
             + document.getElementById('conf-corps').value + "_"
             + document.getElementById('conf-serie').value + "_kv"
             + document.getElementById('text').value.toString() + "_Ma"
-            + document.getElementById('text2').value.toString() + "_s" +
-            tmp +".jpg";
+        + document.getElementById('text2').value.toString() + "_s"
+        + document.getElementById('text3').value.replace(".", ",").toString() + ".jpg";
 }
 
 function imageExist(url) {
