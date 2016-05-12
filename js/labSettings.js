@@ -47,7 +47,7 @@ function modifierTempsPlus() {
             valeurTemps = 0.15;
             break;
     }
-    document.getElementById('text3').value = valeurTemps;
+    document.getElementById('text3').value = valeurTemps.toFixed(2);
 }
 
 function modifierTempsMoins() {
@@ -76,7 +76,7 @@ function modifierTempsMoins() {
             valeurTemps = 0.15;
             break;
     }
-    document.getElementById('text3').value = valeurTemps;
+    document.getElementById('text3').value = valeurTemps.toFixed(2);
 }
 
 function modifierIntensiteTemps(){
