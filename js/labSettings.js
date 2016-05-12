@@ -82,26 +82,3 @@ function modifierTempsMoins() {
 function modifierIntensiteTemps(){
     document.getElementById('text4').value = valeurIntensite * valeurTemps;
 }
-
-var animal = document.getElementById('conf-animal').value;
-var corps = document.getElementById('conf-corps').value;
-var serie = document.getElementById('conf-serie').value;
-var tension = document.getElementById('text').value;
-var intensite = document.getElementById('text2').value;
-var temps = document.getElementById('text3').value;
-
-function image() {
-    var tmp = temps.replace(".",",");
-    return animal + "_" + corps + "_" + serie + "_kv" + tension.toString() + "_Ma" + intensite.toString() + "_s" + tmp +".jpg";
-}
-
-function image_photo() {
-    return animal + "_" + corps + "_" + serie +"_photo.jpeg";
-}
-
-function printall() {
-    var link = "img/simulator/" + image();
-    document.getElementById("img-scan").setAttribute("src", link);
-    var link2 = "img/simulator/" + image_photo();
-    document.getElementById("img-photo").setAttribute("src", link2);
-}
